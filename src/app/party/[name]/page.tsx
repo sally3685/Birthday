@@ -12,8 +12,8 @@ import Fire from '@/app/components/Fire';
 //   }));
 // }
 
-const Party = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const { slug } = await params;
+const Party = async ({ params }: { params: Promise<{ name: string }> }) => {
+  const { name } = await params;
 
   return (
     <main className="w-full h-full gap-12 flex justify-center items-center flex-col ">
@@ -115,7 +115,7 @@ const Party = async ({ params }: { params: Promise<{ slug: string }> }) => {
           ></Image>
         </div>
         <div className="flex gap-2">
-          {slug
+          {name
             .toUpperCase()
             .split('')
             .map((char, index) => (
