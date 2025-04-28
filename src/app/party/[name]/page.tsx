@@ -5,9 +5,7 @@ import styles from '@/app/styles/Fire.module.css';
 import Fire from '@/app/components/Fire';
 
 export async function generateStaticParams() {
-  const names = await fetch('httphttp:/localhost:3000/party/').then((res) =>
-    res.json()
-  );
+  const names = await fetch(`${process.env.PATH}`).then((res) => res.json());
 
   return names.map((name: any) => ({
     slug: name.slug,
