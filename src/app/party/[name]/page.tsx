@@ -4,15 +4,13 @@ import Image from 'next/image';
 import styles from '@/app/styles/Fire.module.css';
 import Fire from '@/app/components/Fire';
 
-export async function generateStaticParams() {
-  const names = await fetch(`${process.env.NEXT_PUBLIC_URL}`).then((res) =>
-    res.json()
-  );
+// export async function generateStaticParams() {
+//   const names = await fetch(`${process.env.NEXT_PUBLIC_URL}`).then((res) => res.json());
 
-  return names.map((name: any) => ({
-    slug: name.slug,
-  }));
-}
+//   return names.map((name: any) => ({
+//     slug: name.slug,
+//   }));
+// }
 
 const Party = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
