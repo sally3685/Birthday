@@ -1,0 +1,12 @@
+.balloonContainer {
+  height: 100vh;
+  position: absolute;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: opacity 500ms;
+  width: 100%;
+  z-index: 3;
+}
